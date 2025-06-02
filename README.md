@@ -4,12 +4,17 @@ This project predicts customer churn using a telecom dataset with various custom
 
 ## Dataset
 - Telecom customer data with features like contract type, tenure, monthly charges, and churn label (yes/no).
+- URL = https://raw.githubusercontent.com/IBM/telco-customer-churn-on-icp4d/master/data/Telco-Customer-Churn.csv
 
 ## What I Did
-- Handled class imbalance using **SMOTE** to generate synthetic samples of the minority class (churners).
-- Tested machine learning models including **Random Forest** and **XGBoost** on resampled data.
-- Applied **cross-validation** to assess model performance reliably.
-- Evaluated models using accuracy, precision, recall, F1-score, and confusion matrix.
+- **Exploratory Data Analysis (EDA):** Analyzed the telecom dataset to understand feature distributions, missing values, and class imbalance.
+- **Data Preprocessing:** Cleaned the data by handling missing values, encoding categorical variables using one-hot encoding, and scaling features where necessary.
+- **Handled Class Imbalance:** Used **SMOTE** (Synthetic Minority Over-sampling Technique) to balance the dataset by generating synthetic samples for the minority class (churners).
+- **Modeling:** Trained and compared three machine learning models:
+  - **Logistic Regression** as a baseline.
+  - **Random Forest Classifier** for better handling of complex data patterns.
+  - **XGBoost Classifier** for efficient gradient boosting and improved accuracy.
+- **Model Evaluation:** Used **cross-validation** to assess model stability and evaluated performance on test data using accuracy, precision, recall, F1-score, and confusion matrix.
 
 ## Results
 - Models achieved around **77-78% accuracy**.
